@@ -1,0 +1,123 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>{% block title %}Entrepreneur sign up{% endblock %}</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="static/assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="static/assets/css/noscript.css" /></noscript>
+	</head>
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1><a href="/">Fuzes</a></h1>
+					</header>
+				 {% with messages = get_flashed_messages(with_categories=true) %} {% if
+    messages %} {% for category, message in messages %} {% if category ==
+    'error' %}
+    <div class="alert alert-danger alter-dismissable fade show" role="alert">
+      {{ message }}
+      <button type="button" class="close" data-dismiss="alert">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    {% else %}
+    <div class="alert alert-success alter-dismissable fade show" role="alert">
+      {{ message }}
+      <button type="button" class="close" data-dismiss="alert">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    {% endif %} {% endfor %} {% endif %} {% endwith %}
+				<div class="container">{% block content %} {% endblock %}</div>
+
+				<!-- Main -->
+					<article id="main">
+						<section class="wrapper style5">
+							<div class="inner">
+
+								<section>
+									<h4>Sign Up as Entrepreneur</h4>
+									<form method="post" action="#">
+										<div class="row gtr-uniform">
+											<div class="col-6 col-12-xsmall">
+												<input type="text" id="name"name="Name" value="" placeholder="Name" />
+											</div>
+											<div class="col-6 col-12-xsmall">
+												<input type="email" id="email" name="Email" value="" placeholder="Email" />
+											</div>
+											<div class="col-12">
+												<input type="password" id="password" name="password"value="" placeholder="Password" />
+											</div>
+											<div class="col-12">
+												<input type="password" name="password2" id="password2" value="" placeholder="Confirm Password" />
+											</div>
+											<div class="col-12">
+												<select name="category" id="category">
+													<option value="">- Business Category -</option>
+													<option value="1">Fashion</option>
+													<option value="1">Skincare</option>
+													<option value="1">Food</option>
+													<option value="1">Technology</option>
+													<option value="1">Perfumes</option>
+													<option value="1">Hair</option>
+												</select>
+											</div>
+											<div class="col-12">
+												<select name="incategory" id="incategory">
+													<option value="">- Influencer Category -</option>
+													<option value="1">5k to 10k</option>
+													<option value="1">11k to 20k</option>
+													<option value="1">21k to 30k</option>
+													<option value="1">31k to 40k</option>
+													<option value="1">41k to 50k</option>
+													<option value="1">51k to 100k</option>
+													<option value="1">101k to 200k</option>
+													<option value="1">201k to 300k</option>
+												</select>
+											</div>
+
+											<div class="col-12">
+												<ul class="actions">
+													<li><input type="submit" value="Sign Up" class="primary" /></li>
+												</ul>
+											</div>
+										</div>
+									</form>
+									<p>Already have an account?<a href="/loginentrepreneur">login</a></p>
+								</section>
+
+							</div>
+						</section>
+					</article>
+
+
+
+		<!-- Scripts -->
+			<script src="static/assets/js/jquery.min.js"></script>
+			<script src="static/assets/js/jquery.scrollex.min.js"></script>
+			<script src="static/assets/js/jquery.scrolly.min.js"></script>
+			<script src="static/assets/js/browser.min.js"></script>
+			<script src="static/assets/js/breakpoints.min.js"></script>
+			<script src="static/assets/js/util.js"></script>
+			<script src="static/assets/js/main.js"></script>
+			<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+				<script
+                src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+				integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      			crossorigin="anonymous"
+    			></script>
+				<script
+      			src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      			integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      			crossorigin="anonymous"
+    			></script>
+    			<script
+      			src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      			integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      			crossorigin="anonymous"
+    			></script>
+</html>
